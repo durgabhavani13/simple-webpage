@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Cycle</title>
+        <style>
+               
+               .grass{
+                background-color: rgb(28, 230, 28);
+                height: 40%;
+                width: 105%;
+                position: relative;
+                top: 500px; 
+                left: 5px; 
+            }
+            @keyframes try{
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            .cycle{
+                background-image: repeating-conic-gradient(violet,indigo,blue,green,yellow,red 20%);
+                height: 16%;
+                width: 8%;
+                border-radius: 50%;
+                animation-name: try;                
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                position: relative;
+                bottom:90px;
+                left: 300px;
+            }
+            @keyframes gir{
+                100%{
+                    transform: translateX(800px);
+                }
+            }
+            .girl{
+                position: absolute;
+                bottom: 50px;
+                animation-name: gir; 
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            .total{
+                animation-name: gir; 
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;  
+            }
+            
+            .stick1 {
+            padding: 5px;
+            background-color: black;
+            position: absolute;
+            left: 24%;
+            top: 28%;
+            height: 35%;
+            animation-name: stick;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes stick {
+            100% {
+                transform: translate(800px);
+            }
+        }
+        </style>
+    </head>
+    <body style="background-color: skyblue;">
+        <div class="grass"></div>
+        <div class="stick1"></div>
+        <div class="total"><div class="cycle"></div>
+        <div class="cycle2"></div></div>
+        <div class="girl"><img src="https://media.baamboozle.com/uploads/images/221143/1614081787_310475_gif-url.gif"></div>
+    </body>
+</html>
